@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{CBFEB95C-5D42-4B03-915B-96818BD760EC}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>OrhestraSystem</RootNamespace>
+    <AssemblyName>OrhestraSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Concert.cs" />
+    <Compile Include="Classes\Maestro.cs" />
+    <Compile Include="Classes\Musicians\PercussionInstrumentMusicians\Drummer.cs" />
+    <Compile Include="Classes\Musicians\PercussionInstrumentMusicians\BellPlayer.cs" />
+    <Compile Include="Classes\Musicians\StringInstrumentMusicians\Celloist.cs" />
+    <Compile Include="Classes\Musicians\StringInstrumentMusicians\Violist.cs" />
+    <Compile Include="Classes\Musicians\StringInstrumentMusicians\Violinist.cs" />
+    <Compile Include="Classes\Musicians\WoodwindInstrumetMusicians\Flutist.cs" />
+    <Compile Include="Classes\Note.cs" />
+    <Compile Include="Classes\Part.cs" />
+    <Compile Include="Classes\Musicians\PercussionInstrumentMusicians\PercussionInstrumentMusicians.cs" />
+    <Compile Include="Classes\Piece.cs" />
+    <Compile Include="Classes\Musicians\StringInstrumentMusicians\StringInstrumentMusicians.cs" />
+    <Compile Include="Classes\Musicians\WoodwindInstrumetMusicians\WoodwindInstrumentMusicians.cs" />
+    <Compile Include="Enums\PartTempo.cs" />
+    <Compile Include="Enums\PieceTempo.cs" />
+    <Compile Include="FileOperation\FileOperations.cs" />
+    <Compile Include="ConcertApp.cs" />
+    <Compile Include="Interfaces\IMusicians.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="pieces\piece1.txt" />
+    <Content Include="pieces\piece2.txt" />
+    <Content Include="pieces\piece3.txt" />
+    <Content Include="pieces\piece4.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

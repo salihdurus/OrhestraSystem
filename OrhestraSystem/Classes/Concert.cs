@@ -40,6 +40,7 @@ namespace OrhestraSystem.Classes
 
         public void CreateMusicians()
         {
+            ///değişiklik
             for (int i = 0; i < pieces.Count; i++)
             {
                 Console.WriteLine();
